@@ -41,3 +41,19 @@ with open(csvpath) as csvfile:
     print("------------------------")   
     print("Winner: " + str(winner_name))
     print("------------------------")        
+
+    #text file printing
+
+    results = os.path.join('election_results.txt')
+
+    with open (results, "w") as txtfile:
+
+        txtfile.write("Election Results")    
+        txtfile.write("\n------------------------")
+        txtfile.write(f"\nTotal Votes: {total_votes}")
+        txtfile.write("\n------------------------")
+        for row in range(len(candidate)):
+            txtfile.write(f"\n{candidate[row]}: {candidate_percent[row]}% {candidate_votes[row]}")
+        txtfile.write("\n------------------------")   
+        txtfile.write(f"\nWinner: {winner_name}")
+        txtfile.write("\n------------------------")   

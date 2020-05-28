@@ -47,4 +47,20 @@ with open(csvpath) as csvfile:
     print("Greatest Increase in Profits: " + str(max_date) + "  $" + "(" + str(greatest_increase) + ")")
     print("Greatest Decrease in Profits: " + str(min_date) + "  $" + "(" + str(greatest_decrease) + ")")
 
+    
+    
+    #text file printing
+
+    analysis = os.path.join('financial_analysis.txt')
+        
+    with open (analysis, "w") as txtfile:
+
+        txtfile.write("Financial Analysis")    
+        txtfile.write("\n------------------------")
+        txtfile.write(f"\nTotal Months: {months}")
+        txtfile.write(f"\nTotal: ${months}")
+        txtfile.write(f"\nAverage Change: ${average_change}")   
+        txtfile.write(f"\nGreatest Increase in Profits: {max_date} ${greatest_increase}")
+        txtfile.write(f"\nGreatest Decrease in Profits: {min_date} ${greatest_decrease}") 
+
 
