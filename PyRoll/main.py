@@ -26,7 +26,7 @@ with open(csvpath) as csvfile:
         candidate_total = candidate_names.count(name)
         candidate_votes.append(candidate_total)
         percent = (candidate_total/total_votes) * 100
-        candidate_percent.append(percent)
+        candidate_percent.append(round(percent))
 
     winner_count = max(candidate_votes)
     winner_name = candidate[candidate_votes.index(winner_count)]
@@ -37,7 +37,7 @@ with open(csvpath) as csvfile:
     print("Total Votes: " + str(total_votes))
     print("------------------------")
     for row in range(len(candidate)):
-        print(candidate[row] + ":  " + str(candidate_percent) + "%" + "(" + str(candidate_votes[row]) + ")")
+        print(candidate[row] + ":  " + str(candidate_percent[row]) + "%  " + "(" + str(candidate_votes[row]) + ")")
     print("------------------------")   
     print("Winner: " + str(winner_name))
     print("------------------------")        

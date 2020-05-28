@@ -10,7 +10,8 @@ date = []
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')   
     header = next(csvreader)
-    
+    #print(header)
+
     total = 0
     months = 0
     profit = 0
