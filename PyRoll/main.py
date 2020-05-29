@@ -3,6 +3,7 @@ import csv
 
 csvpath = 'election_data.csv';
 
+#lists
 candidate_names = []
 candidate = []
 candidate_votes = []

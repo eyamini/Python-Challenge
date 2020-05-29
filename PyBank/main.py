@@ -58,7 +58,7 @@ with open(csvpath) as csvfile:
         txtfile.write("Financial Analysis")    
         txtfile.write("\n------------------------")
         txtfile.write(f"\nTotal Months: {months}")
-        txtfile.write(f"\nTotal: ${months}")
+        txtfile.write(f"\nTotal: ${total}")
         txtfile.write(f"\nAverage Change: ${average_change}")   
         txtfile.write(f"\nGreatest Increase in Profits: {max_date} ${greatest_increase}")
         txtfile.write(f"\nGreatest Decrease in Profits: {min_date} ${greatest_decrease}") 
